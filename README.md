@@ -84,7 +84,7 @@ console.log, setTimeout, setInterval
 
 ### [php node.js 比較](https://kknews.cc/code/al3yaan.html)
 #### 執行模式
-PHP 採用阻塞執行的模型，当你執行一个指令，必须等这个指令執行完成后，才會執行下面的内容。
+PHP 採用阻塞執行的模型，当你執行一个指令，必须等这个指令執行完成后，才會執行下面的内容。</br>
 Node.js 採用非阻塞執行的模型，通常不会等的，你需要提供一个回调函数，这個函数當指令執行完後會被调用一次。
 
 #### 在性能方面
@@ -102,17 +102,13 @@ Node.js 採用非阻塞執行的模型，通常不会等的，你需要提供一
     - apache + php => 開到太多就 crash碰撞? => 有 58 個请求失败(request failed)
     - node: 沒有任何请求失败(request failed)，而且表現數據比小壓力還好
 
-所謂的性能比較，不同情境下，可能會有截然不同的結果，依照我們上述測試，NodeJS 比較快
-php 開這麼多 process，為什麼還比較慢？ => content switch 的成本、記憶體的資源
+所謂的性能比較，不同情境下，可能會有截然不同的結果，依照我們上述測試，NodeJS 比較快</br>
+php 開這麼多 process，為什麼還比較慢？ => content switch 的成本、記憶體的資源</br>
 node 單執行緒 => 先用完 CPU
   - 缺點：無法善用多核心
 
-PHP 容錯能力比較強大
+PHP 容錯能力比較強大</br>
 node single-thread 一但發生讓這個 thread 中止執行的錯誤時，可能整個 server 就掰掰了
-
-
-
-
 
 ---
 ### [Operating System Concepts 作業系統(恐龍書)](https://drive.google.com/drive/folders/1wz1LctMmE4IlXWii6730f9RVkaGZj5fz)
@@ -127,11 +123,11 @@ node single-thread 一但發生讓這個 thread 中止執行的錯誤時，可�
 ![](https://i.imgur.com/4TisICj.png)
 
 #### 排程演算法
-• FIFO: First come first out 不可插隊的。
-• SJF: Shortest Job First 短時任務先做，可插隊的。
-• SRJF: Shortest Remaining Time Job First 可插隊的。
-• Priority Scheduling
-• RR: Round Robin
+• FIFO: First come first out 不可插隊的。</br>
+• SJF: Shortest Job First 短時任務先做，可插隊的。</br>
+• SRJF: Shortest Remaining Time Job First 可插隊的。</br>
+• Priority Scheduling</br>
+• RR: Round Robin</br>
 [老師的講義](https://drive.google.com/drive/folders/1wz1LctMmE4IlXWii6730f9RVkaGZj5fz)
 ![](https://i.imgur.com/ZzYf80g.png)
 ![](https://i.imgur.com/YNQjJkG.png)
@@ -163,26 +159,25 @@ node single-thread 一但發生讓這個 thread 中止執行的錯誤時，可�
 * Scope 作用域
 Scope 作用域指的是變數在程式中可以被存取的範圍，可分為區域變數 跟 全域變數。
 
-  1.  區域變數（Local Variable）
-在 function 內宣告的變數bc，只會在作用域內有效。
+  1.  區域變數（Local Variable）</br>
+在 function 內宣告的變數bc，只會在作用域內有效。</br>
 function scope 裡的變數脫離他自己的 scope 會讀不到。
-  1. 全域變數（Global Variable）
-而不在 function 內宣告的變數a，會被整個程式碼的任何部份給讀取到，也會被 function 讀到。
+  1. 全域變數（Global Variable）</br>
+而不在 function 內宣告的變數a，會被整個程式碼的任何部份給讀取到，也會被 function 讀到。</br>
 ![](https://i.imgur.com/aMc9rIX.png)
 * Closure 閉包
-
-閉包就是 Function 內的 Function
-閉包在 callback 上的應用尤其常見
+閉包就是 Function 內的 Function</br>
+閉包在 callback 上的應用尤其常見</br>
 ![](https://i.imgur.com/adUjKCY.png)
 * Hoisting 提升
-宣告本身會被提升至程式碼最上面，而賦值則留在原地
-Hoisting 的優先順序是：
-函式的宣告（function declaration ）>傳進函式的參數（argument object）>變數宣告（variable declaration）
+宣告本身會被提升至程式碼最上面，而賦值則留在原地</br>
+Hoisting 的優先順序是：</br>
+函式的宣告（function declaration ）>傳進函式的參數（argument object）>變數宣告（variable declaration）</br>
 ![](https://i.imgur.com/peVlTL4.png)
 
   * 那 let 跟 const 有 hoisting 嗎？
-還是有 hoisting ，只是初始化行為跟 var 不同
-var: 變數會被初始化為 undefined
+還是有 hoisting ，只是初始化行為跟 var 不同</br>
+var: 變數會被初始化為 undefined</br>
 let, const : 不會先被初始化，所以在賦值之前的 Temporal Dead Zone(TDZ, 時間死區) 取值會發生錯誤。
 * prototype 原型
 透過「原型」繼承可以讓本來沒有某個屬性的物件去存取其他物件的屬性。
@@ -207,33 +202,33 @@ a.call(obj);
 // 這時 this 也是 obj
 ```
 * Event loop
-JS 是單執行緒，所有同步性的工作，瀏覽器會一個個執行處理工作stack，但遇到非同步的操作就請webapis幫忙處理工作，處理完會先放到一個叫做 task queue 的地方，等到瀏覽器目前沒有其他工作stack，就會到 task queue 看看有沒有還沒執行的任務，再把它拿出來執行。
+JS 是單執行緒，所有同步性的工作，瀏覽器會一個個執行處理工作stack，但遇到非同步的操作就請webapis幫忙處理工作，處理完會先放到一個叫做 task queue 的地方，等到瀏覽器目前沒有其他工作stack，就會到 task queue 看看有沒有還沒執行的任務，再把它拿出來執行。</br>
 JS 的 array function 是已經幫你實作了 Stack / Queue
 ![](https://i.imgur.com/CDkxhLn.png)
 
-  1. Stack 堆疊
-  堆疊(Stack) 是一種 後進先出 的資料結構。 
-  以日常生活例子就是疊盤子。先疊的會在下面，後疊的會在上面，當你要拿盤子一定先從最上面拿 (後疊的)
-  Last In First Out (LIFO): 後進先出，後疊的(後進)，先拿走(先出)。
-  Fisrt In Last Out (FILO): 先進後出，先疊的(先進)，最後拿走(後出)。
-  ![](https://i.imgur.com/Ok01P4f.png)
-把東西放進 stack 的尾巴(疊盤子) ==> push
-把東西從 stack 的尾巴拿出來(拿盤子) ==> pop
-  3. Queue 行列、隊伍
-  隊伍(Queue) 是一種 先進先出 的資料結構。 
-  以日常生活例子就是排隊，先來的會在前面，後來的會在後面。
-  Queue 的特性就是新增元素時發生在 Back後端，刪除元素時發生在 Front 前端。不像 Stack 新增刪除都是發生在頂端。
-![](https://i.imgur.com/kpMZTI8.png)
- 拿出 ==> shift
- 放進去 ==> unshift 
-  * Priority Queue 優先級隊伍 
-優先級最高的會最提早獲得服務，例如：VIP 會員可以優先排隊進場、救護車優先於其他車輛等等
+  1. Stack 堆疊</br>
+  堆疊(Stack) 是一種 後進先出 的資料結構。 </br>
+  以日常生活例子就是疊盤子。先疊的會在下面，後疊的會在上面，當你要拿盤子一定先從最上面拿 (後疊的)</br>
+  Last In First Out (LIFO): 後進先出，後疊的(後進)，先拿走(先出)。</br>
+  Fisrt In Last Out (FILO): 先進後出，先疊的(先進)，最後拿走(後出)。</br>
+  ![](https://i.imgur.com/Ok01P4f.png)</br>
+把東西放進 stack 的尾巴(疊盤子) ==> push</br>
+把東西從 stack 的尾巴拿出來(拿盤子) ==> pop</br>
+  3. Queue 行列、隊伍</br>
+  隊伍(Queue) 是一種 先進先出 的資料結構。 </br>
+  以日常生活例子就是排隊，先來的會在前面，後來的會在後面。</br>
+  Queue 的特性就是新增元素時發生在 Back後端，刪除元素時發生在 Front 前端。不像 Stack 新增刪除都是發生在頂端。</br>
+![](https://i.imgur.com/kpMZTI8.png)</br>
+ 拿出 ==> shift</br>
+ 放進去 ==> unshift </br>
+  * Priority Queue 優先級隊伍 </br>
+優先級最高的會最提早獲得服務，例如：VIP 會員可以優先排隊進場、救護車優先於其他車輛等等</br>
 ![](https://i.imgur.com/fa5MSEG.png)
 
 ---
 ### XMLHttpRequest
 
-XML Http Request瀏覽器提供的
+XML Http Request瀏覽器提供的</br>
 xml 是一種資料格式 (傳輸用的資料格式)
 ```xml=
 <person>
@@ -264,4 +259,3 @@ json 為什麼會大幅取代 xml?
 
 因為老師的課在六日，我男朋友放假於是他也一起聽了一部分，我男朋友是後端的，我有問他在職訓局有沒有學過作業系統，他說沒有，看來也是死記不懂原理的部分，他說老師真的教得很好，慢慢帶著我們了解其中的原理，不是每個老師都會特別講解這部分的，拍拍手
 老師真的教得很生動且很好理解，上課前還會先有個課後小測驗，來了解大家的吸收程度，再針對學生不解的地方做說明，我覺得很棒
-
