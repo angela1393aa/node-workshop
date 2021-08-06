@@ -12,11 +12,12 @@ let doWork = function (job, timer, isOK) {
 };
 //pending
 let job1 = doWork("刷牙", 3000, true);
-job1.then(
-  function (resolve) {
+job1
+  .then(function (resolve) {
     console.log("第一個被呼叫", resolve);
-  },
-  function (reject) {
-    console.log("第二個被呼叫", reject);
-  }
-);
+    return doWork("吃早餐", 5000, true);
+  })
+  .then(function (resolve) {
+    console.log("第二個被呼叫", resolve);
+    return doWork("睡覺", 5000, true);
+  });
