@@ -20,4 +20,7 @@ job1
   .then(function (resolve) {
     console.log("第二個被呼叫", resolve);
     return doWork("睡覺", 5000, true);
+  })
+  .then(function (resolve) {
+    console.log("第三個被呼叫", resolve);
   });
