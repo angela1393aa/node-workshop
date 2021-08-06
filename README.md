@@ -154,7 +154,6 @@ Scope 作用域指的是變數在程式中可以被存取的範圍，可分為�
 function scope 裡的變數脫離他自己的 scope 會讀不到。
   1. 全域變數（Global Variable）</br>
 而不在 function 內宣告的變數a，會被整個程式碼的任何部份給讀取到，也會被 function 讀到。</br>
-![](https://i.imgur.com/aMc9rIX.png)
 * Closure 閉包
 閉包就是 Function 內的 Function</br>
 閉包在 callback 上的應用尤其常見</br>
