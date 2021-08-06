@@ -12,15 +12,7 @@ let doWork = function (job, timer, isOK) {
 };
 //pending
 let job1 = doWork("刷牙", 3000, true);
-job1
-  .then(function (resolve) {
-    console.log("第一個被呼叫", resolve);
-    return doWork("吃早餐", 5000, true);
-  })
-  .then(function (resolve) {
-    console.log("第二個被呼叫", resolve);
-    return doWork("睡覺", 5000, true);
-  })
-  .then(function (resolve) {
-    console.log("第三個被呼叫", resolve);
-  });
+job1.then(function (resolve) {
+  console.log("第一個被呼叫", resolve);
+});
+//第一個被呼叫 完成工作: 刷牙 at 2021-08-06T09:34:27.270Z
