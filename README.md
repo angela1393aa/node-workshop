@@ -129,16 +129,6 @@ node single-thread 一但發生讓這個 thread 中止執行的錯誤時，可�
 • Priority Scheduling</br>
 • RR: Round Robin</br>
 [老師的講義](https://drive.google.com/drive/folders/1wz1LctMmE4IlXWii6730f9RVkaGZj5fz)
-![](https://i.imgur.com/ZzYf80g.png)
-![](https://i.imgur.com/YNQjJkG.png)
-![](https://i.imgur.com/TjcWw7K.png)
-![](https://i.imgur.com/uixoiwk.png)
-![](https://i.imgur.com/At1tNS6.png)
-![](https://i.imgur.com/56EX4BM.png)
-![](https://i.imgur.com/VN2ooyl.png)
-![](https://i.imgur.com/JOeZwEY.png)
-![](https://i.imgur.com/cHcnaZl.png)
-![](https://i.imgur.com/fIayqjp.png)
 
 ---
 ### [矽谷牛的耕田筆記](https://www.facebook.com/technologynoteniu/posts/339605564540249)
@@ -168,12 +158,12 @@ function scope 裡的變數脫離他自己的 scope 會讀不到。
 * Closure 閉包
 閉包就是 Function 內的 Function</br>
 閉包在 callback 上的應用尤其常見</br>
-![](https://i.imgur.com/adUjKCY.png)
+
 * Hoisting 提升
 宣告本身會被提升至程式碼最上面，而賦值則留在原地</br>
 Hoisting 的優先順序是：</br>
 函式的宣告（function declaration ）>傳進函式的參數（argument object）>變數宣告（variable declaration）</br>
-![](https://i.imgur.com/peVlTL4.png)
+
 
   * 那 let 跟 const 有 hoisting 嗎？
 還是有 hoisting ，只是初始化行為跟 var 不同</br>
@@ -204,26 +194,26 @@ a.call(obj);
 * Event loop
 JS 是單執行緒，所有同步性的工作，瀏覽器會一個個執行處理工作stack，但遇到非同步的操作就請webapis幫忙處理工作，處理完會先放到一個叫做 task queue 的地方，等到瀏覽器目前沒有其他工作stack，就會到 task queue 看看有沒有還沒執行的任務，再把它拿出來執行。</br>
 JS 的 array function 是已經幫你實作了 Stack / Queue
-![](https://i.imgur.com/CDkxhLn.png)
+
 
   1. Stack 堆疊</br>
   堆疊(Stack) 是一種 後進先出 的資料結構。 </br>
   以日常生活例子就是疊盤子。先疊的會在下面，後疊的會在上面，當你要拿盤子一定先從最上面拿 (後疊的)</br>
   Last In First Out (LIFO): 後進先出，後疊的(後進)，先拿走(先出)。</br>
   Fisrt In Last Out (FILO): 先進後出，先疊的(先進)，最後拿走(後出)。</br>
-  ![](https://i.imgur.com/Ok01P4f.png)</br>
+</br>
 把東西放進 stack 的尾巴(疊盤子) ==> push</br>
 把東西從 stack 的尾巴拿出來(拿盤子) ==> pop</br>
   3. Queue 行列、隊伍</br>
   隊伍(Queue) 是一種 先進先出 的資料結構。 </br>
   以日常生活例子就是排隊，先來的會在前面，後來的會在後面。</br>
   Queue 的特性就是新增元素時發生在 Back後端，刪除元素時發生在 Front 前端。不像 Stack 新增刪除都是發生在頂端。</br>
-![](https://i.imgur.com/kpMZTI8.png)</br>
+</br>
  拿出 ==> shift</br>
  放進去 ==> unshift </br>
   * Priority Queue 優先級隊伍 </br>
 優先級最高的會最提早獲得服務，例如：VIP 會員可以優先排隊進場、救護車優先於其他車輛等等</br>
-![](https://i.imgur.com/fa5MSEG.png)
+
 
 ---
 ### XMLHttpRequest
