@@ -131,7 +131,7 @@ node single-thread 一但發生讓這個 thread 中止執行的錯誤時，可�
 [老師的講義](https://drive.google.com/drive/folders/1wz1LctMmE4IlXWii6730f9RVkaGZj5fz)
 
 ---
-### [矽谷牛的耕田筆記](https://www.facebook.com/technologynoteniu/posts/339605564540249)
+### 引用[矽谷牛的耕田筆記](https://www.facebook.com/technologynoteniu/posts/339605564540249)
 作者想要分享這十多年的工作經驗中，從那些聰明人身上所學到的事情:
 
 1. 好的解決方案勢必都要能夠針對時間，精力與成本這三個方面取得平衡。
@@ -145,7 +145,7 @@ node single-thread 一但發生讓這個 thread 中止執行的錯誤時，可�
 
 
 ---
-### [JS 觀念](https://reurl.cc/7rAGbd)
+### 引用[JS 觀念](https://reurl.cc/7rAGbd)整理的筆記
 * Scope 作用域
 Scope 作用域指的是變數在程式中可以被存取的範圍，可分為區域變數 跟 全域變數。
 
