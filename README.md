@@ -200,18 +200,16 @@ JS 的 array function 是已經幫你實作了 Stack / Queue
   以日常生活例子就是疊盤子。先疊的會在下面，後疊的會在上面，當你要拿盤子一定先從最上面拿 (後疊的)</br>
   Last In First Out (LIFO): 後進先出，後疊的(後進)，先拿走(先出)。</br>
   Fisrt In Last Out (FILO): 先進後出，先疊的(先進)，最後拿走(後出)。</br>
-</br>
-把東西放進 stack 的尾巴(疊盤子) ==> push</br>
-把東西從 stack 的尾巴拿出來(拿盤子) ==> pop</br>
-  3. Queue 行列、隊伍</br>
+  把東西放進 stack 的尾巴(疊盤子) ==> push</br>
+  把東西從 stack 的尾巴拿出來(拿盤子) ==> pop</br>
+  1. Queue 行列、隊伍</br>
   隊伍(Queue) 是一種 先進先出 的資料結構。 </br>
   以日常生活例子就是排隊，先來的會在前面，後來的會在後面。</br>
   Queue 的特性就是新增元素時發生在 Back後端，刪除元素時發生在 Front 前端。不像 Stack 新增刪除都是發生在頂端。</br>
-</br>
- 拿出 ==> shift</br>
- 放進去 ==> unshift </br>
+  拿出 ==> shift</br>
+  放進去 ==> unshift </br>
   * Priority Queue 優先級隊伍 </br>
-優先級最高的會最提早獲得服務，例如：VIP 會員可以優先排隊進場、救護車優先於其他車輛等等</br>
+  優先級最高的會最提早獲得服務，例如：VIP 會員可以優先排隊進場、救護車優先於其他車輛等等</br>
 
 
 ---
