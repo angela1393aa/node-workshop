@@ -5,19 +5,27 @@ const fs = require("fs");
 const axios = require("axios");
 const moment = require("moment");
 let today = moment().format("YYYYMMDD");
-fs.readFile("stock.txt", "utf8", (err, stock) => {
-  axios
-    .get("https://www.twse.com.tw/exchangeReport/STOCK_DAY", {
+new Promise((resolve, reject) => {
+  fs.readFile("stock.txt", "utf-8", (error, stoke) => {
+    if (error) {
+      reject(error);
+    } else {
+      resolve(stoke);
+    }
+  });
+})
+  .then((stoke) => {
+    return axios.get("https://www.twse.com.tw/exchangeReport/STOCK_DAY", {
       params: {
         response: "json",
         date: today,
-        stockNo: stock,
+        stockNo: stoke,
       },
-    })
-    .then((response) => {
-      console.log(response.data);
     });
-});
-// .catch(err =>{
-//     console.log(err);
-// })
+  })
+  .then((result) => {
+    console.log(result.data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
