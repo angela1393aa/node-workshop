@@ -17,3 +17,5 @@ console.log(5);
 //3
 //5
 //2
+/* 4跑完後->下一行就進去function跑１遇到setTimeout先丟給node.js做,然後跑３
+    ->funnction 跑完後跑５->最後eventloop看到stack空了將Q裡的東西搬過去跑２ */
