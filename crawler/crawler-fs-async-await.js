@@ -8,7 +8,7 @@ function resultCode() {
       if (err) {
         reject(err);
       } else {
-        resolve(stockCode);
+        resolve(stockCode.trim()); //trim()移除空白字元
       }
     });
   });
